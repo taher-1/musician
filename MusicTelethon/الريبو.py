@@ -33,7 +33,7 @@ async def restart(client, m: Message):
     await loli.edit("**✅ تم اعاده تشغيل موسيقى تليثون**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
-@Client.on_message(filters.command(["اوامر الاغاني"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["الاوامر"], prefixes=f"{HNDLR}"))
 async def help(client, m: Message):
     await m.delete()
     HELP = f"""
@@ -58,6 +58,7 @@ async def help(client, m: Message):
 ⧉ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
 🛠 | @Dragon_2022_D
+💤 |@T2R_7
 ⭐ | @T2R_9"""
     await m.reply(HELP)
 @Client.on_message(filters.command(["الريبو"], prefixes=f"{HNDLR}"))
@@ -67,6 +68,7 @@ async def repo(client, m: Message):
 <b>👋  اهلا {m.from_user.mention}!
 
 🎶 هذا ميوزك دراكون | @Dragon_2022_D
+🎶 هذا قناة السورس  | @T2R_7
 ⭐ المطور | @T2R_9
 """
     await m.reply(REPO, disable_web_page_preview=True)
